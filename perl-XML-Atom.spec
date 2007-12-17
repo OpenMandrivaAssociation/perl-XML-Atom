@@ -23,7 +23,6 @@ BuildRequires:    perl(Digest::SHA1)
 BuildRequires:    perl(DateTime)
 BuildRequires:    perl(HTML::Parser)
 BuildArch:        noarch
-BuildRoot:        %{_tmppath}/%{name}-%{version}
 
 %description
 Perl Module for processing Atoms feed and that provides access to the Atom
