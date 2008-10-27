@@ -1,7 +1,7 @@
 %define module  XML-Atom
 %define name    perl-%{module}
-%define release %mkrel 4
-%define version 0.28
+%define release %mkrel 1
+%define version 0.29
 
 Name:               %{name}
 Version:            %{version}
