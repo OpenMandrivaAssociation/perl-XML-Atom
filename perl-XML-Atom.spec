@@ -1,17 +1,16 @@
-%define module  XML-Atom
-%define name    perl-%{module}
-%define release %mkrel 1
-%define version 0.35
+%define upstream_name    XML-Atom
+%define upstream_version 0.35
 
-Name:               %{name}
-Version:            %{version}
-Release:            %{release}
-Summary:            Perl Module for Processing Atom Feeds
-License:            GPL or Artistic
-Group:              Development/Perl
-Url:                http://search.cpan.org/dist/%{module}/
-Source:             http://www.cpan.org/modules/by-module/XML/%{module}-%{version}.tar.bz2
-Requires:         perl(XML::LibXML)
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl Module for Processing Atom Feeds
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:    perl(MIME::Base64)
 BuildRequires:    perl(URI)
 BuildRequires:    perl(Class::Data::Inheritable)
@@ -22,15 +21,16 @@ BuildRequires:    perl(LWP::Authen::Wsse)
 BuildRequires:    perl(Digest::SHA1)
 BuildRequires:    perl(DateTime)
 BuildRequires:    perl(HTML::Parser)
-BuildArch:        noarch
-BuildRoot:        %{_tmppath}/%{name}-%{version}
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+Requires:   perl(XML::LibXML)
 
 %description
 Perl Module for processing Atoms feed and that provides access to the Atom
 API.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 SKIP_SAX_INSTALL=1 CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,5 +51,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/XML
 %{_mandir}/*/*
-
-
