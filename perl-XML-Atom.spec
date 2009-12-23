@@ -1,5 +1,5 @@
 %define upstream_name    XML-Atom
-%define upstream_version 0.35
+%define upstream_version 0.36
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:    Perl Module for Processing Atom Feeds
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:    perl(MIME::Base64)
 BuildRequires:    perl(URI)
@@ -21,8 +21,10 @@ BuildRequires:    perl(LWP::Authen::Wsse)
 BuildRequires:    perl(Digest::SHA1)
 BuildRequires:    perl(DateTime)
 BuildRequires:    perl(HTML::Parser)
+
 BuildArch:  noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires:   perl(XML::LibXML)
 
 %description
