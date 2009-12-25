@@ -3,10 +3,10 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Perl Module for Processing Atom Feeds
-License:    GPL+ or Artistic
+License:    GPLv1+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
