@@ -1,9 +1,9 @@
 %define upstream_name    XML-Atom
-%define upstream_version 0.36
+%define upstream_version 0.37
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Perl Module for Processing Atom Feeds
 License:    GPLv1+ or Artistic
