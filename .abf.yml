@@ -1,2 +1,4 @@
+removed_sources:
+  XML-Atom-0.39.tar.gz: 545b2ae774ac702c0dafab6a54b5149419a55dc6
 sources:
-  "XML-Atom-0.39.tar.gz": 545b2ae774ac702c0dafab6a54b5149419a55dc6
+  XML-Atom-0.41.tar.gz: f0f0c6090ef6e616cc03d0570a474a0b40a4316f
