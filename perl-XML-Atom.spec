@@ -1,15 +1,15 @@
 %define upstream_name    XML-Atom
-%define upstream_version 0.39
+%define upstream_version 0.41
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Perl Module for Processing Atom Feeds
 License:	GPLv1+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/XML-Atom-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(MIME::Base64)
@@ -132,4 +132,5 @@ make test
 
 * Fri Mar 02 2007 Shlomi Fish  0.25-1mdv2007.1
 - Initial release. Adapted the Feed-Find spec for this one.
+
 
