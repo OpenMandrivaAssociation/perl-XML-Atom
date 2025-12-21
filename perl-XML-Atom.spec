@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/XML/XML-Atom-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(MIME::Base64)
 BuildRequires:	perl(URI)
