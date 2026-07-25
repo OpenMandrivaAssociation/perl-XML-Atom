@@ -1,15 +1,15 @@
 %define upstream_name    XML-Atom
-%define upstream_version 0.41
+%define upstream_version 0.43
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Perl Module for Processing Atom Feeds
 License:	GPLv1+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/XML/XML-Atom-%{upstream_version}.tar.gz
+Url:		https://github.com/miyagawa/xml-atom
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/XML-Atom-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
