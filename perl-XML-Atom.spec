@@ -1,15 +1,13 @@
 %define upstream_name    XML-Atom
-%define upstream_version 0.43
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.43
+Release:	2
 
 Summary:	Perl Module for Processing Atom Feeds
 License:	GPLv1+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/miyagawa/xml-atom
-Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/XML-Atom-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/XML-Atom-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -32,7 +30,7 @@ Perl Module for processing Atoms feed and that provides access to the Atom
 API.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 SKIP_SAX_INSTALL=1 CFLAGS="%{optflags}" perl Makefile.PL INSTALLDIRS=vendor
@@ -72,9 +70,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.350.0-1mdv2010.0
 + Revision: 401878
-- rebuild using %%perl_convert_version
-
-* Sun May 03 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.35-1mdv2010.0
+- rebuild using %0.43 Sun May 03 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.35-1mdv2010.0
 + Revision: 371363
 - update to new version 0.35
 
